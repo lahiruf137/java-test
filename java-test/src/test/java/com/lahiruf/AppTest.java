@@ -1,4 +1,4 @@
-package com.java.test;
+package com.lahiruf;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
