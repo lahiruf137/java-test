@@ -1,4 +1,4 @@
-package com.lahiru.FirstAkkaApplication;
+package com.lahiru.AkkaTestApplication;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
