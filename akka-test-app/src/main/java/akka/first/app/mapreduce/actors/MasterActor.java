@@ -3,7 +3,9 @@ package akka.first.app.mapreduce.actors;
 import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
-import akka.first.app.mapreduce.messages.*;
+import akka.first.app.mapreduce.messages.MapData;
+import akka.first.app.mapreduce.messages.ReduceData;
+import akka.first.app.mapreduce.messages.Result;
 import akka.routing.RoundRobinRouter;
 
 public class MasterActor extends UntypedActor{

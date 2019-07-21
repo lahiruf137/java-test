@@ -11,8 +11,6 @@ import akka.pattern.Patterns;
 import akka.util.Duration;
 import akka.util.Timeout;
 
-
-
 /**
  * Hello world!
  *
@@ -24,6 +22,7 @@ public class App
         
         Timeout timeout = new Timeout(Duration.parse("5 seconds"));
         ActorSystem _system = ActorSystem.create("MapReduceApp");
+        //ActorRef master = _system.actorOf(new Props(),"master");
         ActorRef master = _system.actorOf(new Props(MasterActor.class),"master");
         master.tell("The quick brown fox tried to jump over thelazy dog and fell on the dog");
         master.tell("Dog is man's best friend");
