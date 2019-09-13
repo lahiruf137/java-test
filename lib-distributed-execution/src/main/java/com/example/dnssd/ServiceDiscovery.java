@@ -5,10 +5,10 @@ import javax.jmdns.JmDNS;
 
 public class ServiceDiscovery {
 	
-	public ServiceDiscovery(String Servicetype,SimpleListener simpleListener) {
+	public ServiceDiscovery(String servicetype,SimpleListener simpleListener) {
 		try {
 			JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
-			jmdns.addServiceListener("_http._tcp.local.", simpleListener);
+			jmdns.addServiceListener(servicetype, simpleListener);
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}

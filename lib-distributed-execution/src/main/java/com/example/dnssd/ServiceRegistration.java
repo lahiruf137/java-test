@@ -31,7 +31,7 @@ public class ServiceRegistration {
 		
 	}
 	public ServiceRegistration() {
-		this("example-service.local.","example-service","example-description",8080);
+		this("_example._tcp.local.","example-service","example-description",8080);
 	}
 	public void unregisterAllServices() {
 		

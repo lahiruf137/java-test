@@ -8,14 +8,16 @@ import com.example.dnssd.*;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         System.out.println( "Hello World!" );
         Thread server=new Thread(new SampleServer());
         server.start();
         System.out.println("test");
-        new ServiceDiscovery("example-service.local.",new Test1());
-        
+        new ServiceDiscovery("_example._tcp.local.",new Test1());
+        Thread.sleep(30000);
+        System.out.println("ok");
+        System.exit(0);
     }
     
     static class Test1 extends SimpleListener{
